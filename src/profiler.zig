@@ -122,15 +122,15 @@ fn calibrate() void {
         const zone = begin(@src(), "calibrate");
         defer zone.end();
 
-        @fence(.acq_rel);
+        //@fence(.acq_rel);
         const t0 = std.time.Instant.now() catch unreachable;
         const r0 = sample();
-        @fence(.acq_rel);
+        //@fence(.acq_rel);
         std.time.sleep(std.time.ns_per_ms * 200);
-        @fence(.acq_rel);
+        //@fence(.acq_rel);
         const t1 = std.time.Instant.now() catch unreachable;
         const r1 = sample();
-        @fence(.acq_rel);
+        //@fence(.acq_rel);
 
         const dt = t1.since(t0);
         const dr = r1 - r0;
