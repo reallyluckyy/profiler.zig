@@ -1,6 +1,1 @@
-.{
-    .name = "profiler.zig",
-    .version = "0.1.0",
-    .paths = .{""},
-    .dependencies = .{},
-}
+.{ .name = .profiler, .version = "0.1.0", .paths = .{""}, .dependencies = .{}, .fingerprint = 0xfc37b5a6978d3fbc }
